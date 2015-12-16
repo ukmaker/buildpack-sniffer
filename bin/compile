@@ -1,0 +1,15 @@
+#!/bin/bash
+echo "Buildpack sniffer running"
+HERE=$( pwd )
+ROOT=$( dirname $0 )
+APP=$1
+CACHE=$2
+
+echo "HERE=${HERE}  ROOT=${ROOT}  APP=${APP}  CACHE=${CACHE}"
+
+for LOC in ${HERE} ${ROOT} ${APP} ${CACHE} ; do
+	echo "==== ${LOC} ===="
+	ls -l ${LOC}
+done
+
+
